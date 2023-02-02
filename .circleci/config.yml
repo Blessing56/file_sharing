@@ -46,7 +46,7 @@ workflows:
   my-workflow:
     jobs:
       - save_hello_world_output
-      - print_output_file
-      - reusable_code:
+      - reusable_code
+      - print_output_file:
           requires:
             - save_hello_world_output
