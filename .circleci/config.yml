@@ -32,6 +32,10 @@ jobs:
       - run:
          command: 
            cat ~/outs.txt
+      - run:
+          command: 
+            echo "Last command failed"
+          when: on_fail
         
 
   reusable_code:
