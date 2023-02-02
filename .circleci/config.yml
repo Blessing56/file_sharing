@@ -30,7 +30,9 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
-          cat ~/outs.txt
+         command: 
+           cat ~/outs.txt
+        
 
   reusable_code:
     docker:
