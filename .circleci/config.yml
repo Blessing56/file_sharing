@@ -17,11 +17,11 @@ jobs:
       - checkout
       - run:
           name: print_hello
-          command: echo "Hello Sweetheart" > ~/output.txt
+          command: echo "Hello Sweetheart" > ~/outs.txt
       - persist_to_workspace:
           root: ~/
           paths:
-            - "output.txt"
+            - "outs.txt"
 
   print_output_file:
     docker:
@@ -30,7 +30,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
-          cat ~/output.txt
+          cat ~/outs.txt
 
   reusable_code:
     docker:
